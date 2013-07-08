@@ -36,8 +36,8 @@ class AboutHashes < Neo::Koan
     hash = { :one => "uno", :two => "dos" }
     hash[:one] = "eins"
 
-    expected = { :one => "eins", :two => "dos" }
-    assert_equal {:one => "eins", :two => "dos" }, hash
+    expected = { :one => __, :two => "dos" }
+    assert_equal hash, { :one => "eins", :two => "dos" }
 
     # Bonus Question: Why was "expected" broken out into a variable
     # rather than used as a literal?
